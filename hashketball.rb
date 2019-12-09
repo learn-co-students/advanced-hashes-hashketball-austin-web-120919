@@ -182,3 +182,34 @@ def big_shoe_rebounds
   shoes_arr = shoes_rebounds.to_a
   return shoes_arr[-1][1]
 end
+
+def most_points_scored
+  player_points = {}
+  game_hash.each do |side,team_data|
+    team_data.each do |attribute,data|
+      next unless attribute == :players
+      data.each do |data_item|
+        player_points[data_item[:player_name]] = data_item[:points]
+      end
+    end
+  end
+  return player_points.key(player_points.values.max)
+end
+
+def winning_team
+  team_points = {}
+  game_hash.each do |side,team_data|
+    next unless team_data == :team_name
+    binding.pry
+    teams_points[team_data[:team_name]] = 0
+    team_data.each do |attribute,data|
+      binding.pry
+      next unless attribute == :players
+      data.each do |data_item|
+        team_points[team_data[:team_name]] += data_item[:points]
+      end
+    end
+  end
+  team_points.key(team_points.values.max)
+  binding.pry
+end
