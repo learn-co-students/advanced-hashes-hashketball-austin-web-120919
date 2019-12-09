@@ -1,4 +1,4 @@
-# Hashketball
+  # Hashketball
 
 ## Learning Goals
 
@@ -355,7 +355,7 @@ throughout this course and do a deeper dive on Pry specifically.
 
 ## Conclusion
 
-This is a new frontier for you! You are now using powerful tools of Ruby 
+This is a new frontier for you! You are now using powerful tools of Ruby
 to transform a nested data structure, that you made from non-computer-ready
 data, to produce insights. You've made huge strides in becoming a really solid
 developer in the procedural programming paradigm. This is a huge moment.
